@@ -18,7 +18,7 @@ public class ScoreSheet {
 	        score += 10 + spareBonus(frameIndex);
 	        frameIndex += 2;
 	      } else {
-	        score += sumOfBallsInFrame(frameIndex);
+	        score += sumOfPinsInFrame(frameIndex);
 	        frameIndex += 2;
 	      }
 	    }
@@ -29,7 +29,7 @@ public class ScoreSheet {
 	    return rolls[frameIndex] == 10;
 	  }
 
-	  private int sumOfBallsInFrame(int frameIndex) {
+	  private int sumOfPinsInFrame(int frameIndex) {
 	    return rolls[frameIndex] + rolls[frameIndex+1];
 	  }
 
