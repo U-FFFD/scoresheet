@@ -49,39 +49,15 @@ public class ScoreSheet {
 	}
 
 	public int getCurrFrame() {
-		  int current = 0;
-		  if(currentRoll == (1|2)) {
-			  return current = 1;
-		  }
-		  else if(currentRoll == (3|4)) {
-			  return current = 2;
-		  }
-		  else if(currentRoll == (5|6)) {
-			  return current = 3;
-		  }
-		  else if(currentRoll == (7|8)) {
-			  return current = 4;
-		  }
-		  else if(currentRoll == (9|10)) {
-			  return current = 5;
-		  }
-		  else if(currentRoll == (11|12)) {
-			  return current = 6;
-		  }
-		  else if(currentRoll == (13|14)) {
-			  return current = 7;
-		  }
-		  else if(currentRoll == (15|16)) {
-			  return current = 8;
-		  }
-		  else if(currentRoll == (17|18)) {
-			  return current = 9;
-		  }
-		  else if(currentRoll == (19|20)) {
-			  return current = 10;
-		  }
-		  else
-		  return current;
+		  int current;
+
+      if (currentRoll % 2 == 1){
+        current = (currentRoll + 1) / 2;
+      } else {
+        current = currentRoll / 2;
+      }
+
+		  return ++current;
 	  }
 
 	  private boolean isStrike(int frameIndex) {

@@ -13,6 +13,16 @@ import org.junit.Test;
 
 public class ScoreTest2 {
   @Test
+  public void testCurrentFrame(){
+    ScoreSheet testScoreSheet = new ScoreSheet();
+    for (int i = 1; i <= 10; i++){
+      assertEquals(testScoreSheet.getCurrFrame(), i);
+      testScoreSheet.roll(5);
+      testScoreSheet.roll(2);
+    }
+  }
+
+  @Test
   public void testTwoThrows(){
     ScoreSheet testScoreSheet = new ScoreSheet();
     testScoreSheet.roll(7);
@@ -27,7 +37,7 @@ public class ScoreTest2 {
     ScoreSheet testScoreSheet = new ScoreSheet();
     int beforeStrikeFrame = testScoreSheet.getCurrFrame();
     testScoreSheet.roll(10);
-    assertEquals(beforeStrikeFrame, testScoreSheet.getCurrFrame());
+    assertEquals(beforeStrikeFrame, testScoreSheet.getCurrFrame() - 1);
   }
 
 
