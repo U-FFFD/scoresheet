@@ -17,9 +17,10 @@ public class ScoreTest2 {
     ScoreSheet testScoreSheet = new ScoreSheet();
     testScoreSheet.roll(7);
     testScoreSheet.roll(2);
-    assertEquals(testScoreSheet.score(1), 9);
+    assertEquals(testScoreSheet.getScoreAt(1), 9);
     assertEquals(testScoreSheet.score(), 9);
   }
+
 
   @Test
   public void testStrikeMovesToNextFrame(){
@@ -29,6 +30,7 @@ public class ScoreTest2 {
     assertEquals(beforeStrikeFrame, testScoreSheet.getCurrFrame());
   }
 
+
   @Test
   public void testStrikeOnLastFrame(){
     ScoreSheet testScoreSheet = new ScoreSheet();
@@ -37,8 +39,12 @@ public class ScoreTest2 {
       testScoreSheet.roll(2);
       testScoreSheet.roll(3);
     }
+    assertEquals(testScoreSheet.score(), 35);
     testScoreSheet.roll(10);
+    assertEquals(testScoreSheet.score(), 45);
     testScoreSheet.roll(10);
+    assertEquals(testScoreSheet.score(), 65);
     testScoreSheet.roll(10);
+    assertEquals(testScoreSheet.score(), 95);
   }
 }

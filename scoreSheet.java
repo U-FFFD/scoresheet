@@ -1,5 +1,4 @@
 // Collaborators : Emmett Wesolowski
-// Collaborators : Emmett Wesolowski
 public class ScoreSheet {
 	  private int rolls[] = new int[21];
 	  private int currentRoll = 0;
@@ -25,7 +24,7 @@ public class ScoreSheet {
 	    }
 	    return score;
 	  }
-	  
+
 	  public int getScoreAt(int frame) {
 		int score = 0;
 		int frameIndex = 0;
@@ -40,15 +39,15 @@ public class ScoreSheet {
 				score += sumOfPinsInFrame(frameIndex);
 				frameIndex += 2;
 			}
-		  }
-		
+		}
+
 		if (frame != 1 ) {
 			score = getScoreAt(frame-1);
 		}
-		
-		return score;	
+
+		return score;
 		}
-		  
+
 
 	  private boolean isStrike(int frameIndex) {
 	    return rolls[frameIndex] == 10;
@@ -75,4 +74,3 @@ public class ScoreSheet {
 		  }
 	  }
 }
-
