@@ -11,6 +11,7 @@ public class ScoreTest1
 	public void testOneThrow(){
 		ScoreSheet sheet = new ScoreSheet();
 		sheet.roll(4);
+		sheet.roll(0);
 		assertEquals(sheet.score(), 4);
 		assertEquals(sheet.getScoreAt(1), 4);
 		
