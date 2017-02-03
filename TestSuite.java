@@ -3,9 +3,9 @@ import org.junit.runners.Suite;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({ 
-	scoreTest1.class, 
-	scoreTest2.class,
-	scoreTest3.class })
+    ScoreTest1.class,
+	ScoreTest2.class,
+	ScoreTest3.class })
 
 public class TestSuite {
 }

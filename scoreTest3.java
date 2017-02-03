@@ -2,7 +2,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class scoreTest3 {
+public class ScoreTest3 {
 	
 	ScoreSheet s = new ScoreSheet();
 

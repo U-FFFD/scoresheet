@@ -4,11 +4,11 @@
 import static org.junit.Assert.*;
 import org.junit.Test;
 
-public class scoreTest1
+public class ScoreTest1
 {
 	
 	@Test
-	public void testOneThrow{
+	public void testOneThrow(){
 		ScoreSheet sheet = new ScoreSheet();
 		sheet.roll(4);
 		assertEquals(sheet.score(), 4);
@@ -20,7 +20,7 @@ public class scoreTest1
 	}
 	
 	@Test
-	public void testSpareCountsNextFrameScore{
+	public void testSpareCountsNextFrameScore(){
 		ScoreSheet sheet = new ScoreSheet();
 		sheet.roll(6);
 		sheet.roll(4);
@@ -32,7 +32,7 @@ public class scoreTest1
 	}
 	
 	@Test
-	public void testSpareOnLastFrame{
+	public void testSpareOnLastFrame(){
 		ScoreSheet sheet = new ScoreSheet();
 		
 		 for (int i = 0; i < 8; i++)
