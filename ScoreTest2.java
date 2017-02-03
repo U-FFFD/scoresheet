@@ -3,9 +3,10 @@
 */
 
 /* Tests:
-  * testTwoThrows
-  * testStrikeMovesToNextFrame
-  * testStrikeOnLastFrame
+  * testCurrentFrame: ensures the getCurrFrame function works
+  * testTwoThrows: does two throws, and ensures score is tracked properly
+  * testStrikeMovesToNextFrame: On a strike, it should skip the second throw
+  * testStrikeOnLastFrame: Tests a series of strikes on the last frames
 */
 
 import static org.junit.Assert.*;
