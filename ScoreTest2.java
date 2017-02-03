@@ -35,9 +35,9 @@ public class ScoreTest2 {
   @Test
   public void testStrikeMovesToNextFrame(){
     ScoreSheet testScoreSheet = new ScoreSheet();
-    int beforeStrikeFrame = testScoreSheet.getCurrFrame();
+    assertEquals(testScoreSheet.getCurrFrame(), 1);
     testScoreSheet.roll(10);
-    assertEquals(beforeStrikeFrame, testScoreSheet.getCurrFrame() - 1);
+    assertEquals(testScoreSheet.getCurrFrame(), 2);
   }
 
 
